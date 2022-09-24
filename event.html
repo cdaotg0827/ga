@@ -19,12 +19,22 @@
 	<script>
 		function trackCTA() {
 			// 送出事件紀錄
-			gtag("event", "點擊CTA按鈕", {
+			gtag("event", "點擊", {
 				"event_category": "CALL_TO_ACTION",
-				"event_label": "追蹤事件按鈕",
+				"event_label": "頁面標題",
 				"value": 1
 			});
-			alert("Event Sent!");
+			alert("Event Sent!!!!");
+		}
+
+		function trackOutSideWeb(webLebal) {
+			// 送出事件紀錄
+			gtag("event", "跳轉", {
+				"event_category": "OUTSIDE-WEB",
+				"event_label": webLebal,
+				"value": 1
+			});
+			console.log("Event LOG - outsideWeb");
 		}
 	</script>
 </head>
@@ -32,6 +42,8 @@
 <body>
 	追蹤網頁瀏覽次數
 	<button onclick="trackCTA();">Call to Action</button>
+	<a href="https://www.facebook.com/" onclick="trackOutSideWeb('FB')">Facebook</a>
+	<a href="https://training.pada-x.com/google-analytics.htm" onclick="trackOutSideWeb('cwpeng')">彭彭的網站-GA</a>
 </body>
 
 </html>
