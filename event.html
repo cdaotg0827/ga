@@ -14,12 +14,14 @@
 
 		gtag("config", "G-C4MV9WZDDJ");
 	</script>
+
+	<!-- 給GA的事件追蹤-->
 	<script>
 		function trackCTA() {
 			// 送出事件紀錄
-			gtag("event", "點擊", {
-				"event_category": "CTA",
-				"event_label": "頁面標題",
+			gtag("event", "點擊CTA按鈕", {
+				"event_category": "CALL_TO_ACTION",
+				"event_label": "追蹤事件按鈕",
 				"value": 1
 			});
 			alert("Event Sent!");
